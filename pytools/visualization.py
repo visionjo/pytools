@@ -5,7 +5,7 @@ from time import strftime
 from PIL import Image
 import argparse
 import glob
-
+import torch
 row_size = 4
 margin = 3
 
@@ -35,6 +35,8 @@ def generate_montage(filenames, output_fn):
 
     montage = montage.crop((0, 0, max_x, max_y))
     montage.save(output_fn)
+
+
 
 
 if __name__ == '__main__':
